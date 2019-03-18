@@ -13,12 +13,12 @@ $(window).on('action:composer.enhanced', function (evt, data) {
 					if (block.in && block.atEnd) {
 						controls.updateTextareaSelection(textarea, selectionStart + 4, selectionStart + 4);
 					} else {
-						controls.insertIntoTextarea(textarea, '[s=][/s]');
+						controls.insertIntoTextarea(textarea, '[s=]\n\n\n[/s]');
 						controls.updateTextareaSelection(textarea, selectionStart + 4, selectionStart + 4);
 					}
 				} else {
 					const wrapDelta = controls.wrapSelectionInTextareaWith(textarea, '[s=]', '[/s]');
-					controls.updateTextareaSelection(textarea, selectionStart + 4 + wrapDelta[0], selectionEnd + 4 - wrapDelta[1]);
+					controls.updateTextareaSelection(textarea, selectionStart + 6 + wrapDelta[0], selectionEnd + 4 - wrapDelta[1]);
 				}
 			});
 		}
