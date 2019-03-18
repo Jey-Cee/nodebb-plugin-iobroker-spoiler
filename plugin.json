@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-plugin-simple-spoiler",
+	"id": "nodebb-plugin-iobroker-spoiler",
 	"library": "./library.js",
 	"hooks": [
 		{
