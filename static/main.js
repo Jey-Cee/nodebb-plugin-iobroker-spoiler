@@ -11,14 +11,14 @@ $(window).on('action:composer.enhanced', function (evt, data) {
 				if (selectionStart === selectionEnd) {
 					const block = controls.getBlockData(textarea, '[/s]', selectionStart);
 					if (block.in && block.atEnd) {
-						controls.updateTextareaSelection(textarea, selectionStart + 6, selectionStart + 4);
+						controls.updateTextareaSelection(textarea, selectionStart + 6, selectionStart + 6);
 					} else {
 						controls.insertIntoTextarea(textarea, '[s=]\n \n[/s]');
-						controls.updateTextareaSelection(textarea, selectionStart + 6, selectionStart + 4);
+						controls.updateTextareaSelection(textarea, selectionStart + 6, selectionStart + 6);
 					}
 				} else {
 					const wrapDelta = controls.wrapSelectionInTextareaWith(textarea, '[s=]\n', '\n[/s]');
-					controls.updateTextareaSelection(textarea, selectionStart + 6 + wrapDelta[0], selectionEnd + 4 - wrapDelta[1]);
+					controls.updateTextareaSelection(textarea, selectionStart + 6 + wrapDelta[0], selectionEnd + 6 - wrapDelta[1]);
 				}
 			});
 		}
