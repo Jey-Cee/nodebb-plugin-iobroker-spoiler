@@ -17,7 +17,7 @@ $(window).on('action:composer.enhanced', function (evt, data) {
 						controls.updateTextareaSelection(textarea, selectionStart + 6, selectionStart + 4);
 					}
 				} else {
-					const wrapDelta = controls.wrapSelectionInTextareaWith(textarea, '[s=]', '[/s]');
+					const wrapDelta = controls.wrapSelectionInTextareaWith(textarea, '[s=]\n', '\n[/s]');
 					controls.updateTextareaSelection(textarea, selectionStart + 6 + wrapDelta[0], selectionEnd + 4 - wrapDelta[1]);
 				}
 			});
