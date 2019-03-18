@@ -13,7 +13,7 @@ $(window).on('action:composer.enhanced', function (evt, data) {
 					if (block.in && block.atEnd) {
 						controls.updateTextareaSelection(textarea, selectionStart + 6, selectionStart + 4);
 					} else {
-						controls.insertIntoTextarea(textarea, '[s=]\n\n\n[/s]');
+						controls.insertIntoTextarea(textarea, '[s=]\n \n[/s]');
 						controls.updateTextareaSelection(textarea, selectionStart + 6, selectionStart + 4);
 					}
 				} else {
